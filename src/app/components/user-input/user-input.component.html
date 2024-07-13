@@ -1,0 +1,12 @@
+<div class="p-3 max-w-lg mx-auto">
+  <h1 class='text-3xl text-center font-semibold my-7 text-gray-900'>Add Details</h1>
+  <form (ngSubmit)="addUser()" class="flex flex-col gap-4">
+      <input class="border p-3 rounded-lg"  placeholder="Name" [(ngModel)]="user.name" name="name" required>
+      <input class="border p-3 rounded-lg" placeholder="Workout Type" [(ngModel)]="user.workoutType" name="workoutType" required>
+      <input class="border p-3 rounded-lg" placeholder="Minutes" type="number" [(ngModel)]="user.minutes" name="minutes" required>
+    <button class='bg-slate-700 text-white p-3 rounded-lg uppercase hover:opacity-95 disabled:opacity-80' type="submit">Add User</button>
+  </form>
+</div>
+
+
+  

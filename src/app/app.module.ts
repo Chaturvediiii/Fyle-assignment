@@ -1,23 +1,35 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
-import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { UserInputComponent } from './components/user-input/user-input.component';
+import { UserTableComponent } from './components/user-table/user-table.component';
+import { UserSearchComponent } from './components/user-search/user-search.component';
+import { UserListComponent } from './components/user-list/user-list.component';
+import { MaterialModule } from './material.module';
+import { UserService } from './services/user.service';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    UserInputComponent,
+    UserTableComponent,
+    UserSearchComponent,
+    UserListComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    MatSlideToggleModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    MaterialModule,
+    AppRoutingModule
   ],
-  providers: [
-    provideAnimationsAsync()
-  ],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
+
