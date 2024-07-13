@@ -46,6 +46,8 @@ export class UserTableComponent implements OnInit, OnChanges {
   }
 
   applyFilter() {
-    this.users.filter = this.searchTerm.trim().toLowerCase();
+    const filteredUsers = this.userService.filterUsers(this.searchTerm);
+    this.users.data = filteredUsers;
+    this.totalUsers = filteredUsers.length;
   }
 }

@@ -1,30 +1,29 @@
 import { Injectable } from '@angular/core';
+import { User } from '../models/user.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
-  private usersKey = 'users';
+  private users: User[] = [
+    { name: 'John', workoutType: 'Running', minutes: 30 },
+    { name: 'Jane', workoutType: 'Cycling', minutes: 45 },
+    { name: 'Doe', workoutType: 'Swimming', minutes: 60 }
+  ];
 
-  constructor() {
-    if (!localStorage.getItem(this.usersKey)) {
-      const initialUsers = [
-        { name: 'John Doe', workoutType: 'Running', minutes: 30 },
-        { name: 'Jane Smith', workoutType: 'Swimming', minutes: 45 },
-        { name: 'Alice Johnson', workoutType: 'Cycling', minutes: 60 }
-      ];
-      localStorage.setItem(this.usersKey, JSON.stringify(initialUsers));
-    }
+  getUsers(): User[] {
+    return this.users;
   }
 
-  getUsers() {
-    return JSON.parse(localStorage.getItem(this.usersKey) || '[]');
+  addUser(user: User) {
+    this.users.push(user);
   }
 
-  addUser(user: any) {
-    const users = this.getUsers();
-    users.push(user);
-    localStorage.setItem(this.usersKey, JSON.stringify(users));
+  filterUsers(searchTerm: string): User[] {
+    return this.users.filter(user =>
+      user.name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
   }
 }
+
 

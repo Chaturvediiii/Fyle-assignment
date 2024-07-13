@@ -10,6 +10,7 @@ import { UserListComponent } from './components/user-list/user-list.component';
 import { MaterialModule } from './material.module';
 import { UserService } from './services/user.service';
 import { AppRoutingModule } from './app-routing.module';
+import { UserFilterComponent } from './components/user-filter/user-filter.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { AppRoutingModule } from './app-routing.module';
     UserInputComponent,
     UserTableComponent,
     UserSearchComponent,
-    UserListComponent
+    UserListComponent,
+    UserFilterComponent
   ],
   imports: [
     BrowserModule,
