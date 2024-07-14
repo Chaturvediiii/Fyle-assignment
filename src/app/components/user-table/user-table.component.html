@@ -1,19 +1,31 @@
 <div class="m-3 mat-elevation-z8">
-  <table mat-table [dataSource]="users" class="">
+  <table mat-table [dataSource]="users" class="mat-elevation-z8">
     <ng-container matColumnDef="name">
       <th mat-header-cell *matHeaderCellDef> Name </th>
       <td mat-cell *matCellDef="let user"> {{user.name}} </td>
     </ng-container>
-    <ng-container matColumnDef="workoutType">
-      <th mat-header-cell *matHeaderCellDef> Workout Type </th>
-      <td mat-cell *matCellDef="let user"> {{user.workoutType}} </td>
+
+    <ng-container matColumnDef="workouts">
+      <th mat-header-cell *matHeaderCellDef> Workouts </th>
+      <td mat-cell *matCellDef="let user">
+        <div *ngFor="let workout of user.workouts">
+          {{ workout.workoutType }}
+        </div>
+      </td>
     </ng-container>
-    <ng-container matColumnDef="minutes">
-      <th mat-header-cell *matHeaderCellDef> Minutes </th>
-      <td mat-cell *matCellDef="let user"> {{user.minutes}} </td>
+
+    <ng-container matColumnDef="totalWorkoutTypes">
+      <th mat-header-cell *matHeaderCellDef> Total Workout Types </th>
+      <td mat-cell *matCellDef="let user"> {{user.totalWorkoutTypes}} </td>
     </ng-container>
+
+    <ng-container matColumnDef="totalMinutes">
+      <th mat-header-cell *matHeaderCellDef> Total Minutes </th>
+      <td mat-cell *matCellDef="let user"> {{user.totalMinutes}} </td>
+    </ng-container>
+
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
-  <mat-paginator length="100" [pageSize]="5" aria-label="select page of user"></mat-paginator>
+  <mat-paginator [length]="totalUsers" [pageSize]="5" aria-label="Select page of users"></mat-paginator>
 </div>

@@ -1,6 +1,7 @@
 export interface User {
-    name: string;
-    workoutType: string;
-    minutes: number;
-  }
+  name: string;
+  workouts: { workoutType: string, minutes: number }[];
+  totalWorkoutTypes: number;
+  totalMinutes: number;
+}
   

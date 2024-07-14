@@ -35,8 +35,7 @@ export class UserChartComponent implements OnInit {
     const users: User[] = this.userService.getUsers();
     this.single = users.map(user => ({
       name: user.name,
-      value: user.minutes
+      value: user.totalMinutes
     }));
   }
 }
-

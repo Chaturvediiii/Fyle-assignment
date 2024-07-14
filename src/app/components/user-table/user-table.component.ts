@@ -16,7 +16,7 @@ import { UserService } from '.././../services/user.service';
   styleUrls: ['./user-table.component.css'],
 })
 export class UserTableComponent implements OnInit, OnChanges {
-  displayedColumns: string[] = ['name', 'workoutType', 'minutes'];
+  displayedColumns: string[] = ['name', 'workouts', 'totalWorkoutTypes', 'totalMinutes'];
   users = new MatTableDataSource<any>();
   totalUsers = 0;
 

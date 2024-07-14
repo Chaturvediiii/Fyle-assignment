@@ -16,5 +16,3 @@ export class UserInputComponent {
     this.user = { name: '', workoutType: '', minutes: 0 };
   }
 }
-
-
