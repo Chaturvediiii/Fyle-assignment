@@ -1,4 +1,13 @@
-#Deployed Link : [Health-challenge-tracker][https://ornate-yeot-048ff9.netlify.app/user-input]
+#Deployed Link : https://health-challenge-tracker-ten.vercel.app/user-input
+
+# Routes
+
+/user-input - Input form
+
+/user-list - All users
+
+/user-chart - Visual Representation
+
 
 # Code Coverage Report
 
