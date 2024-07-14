@@ -23,6 +23,7 @@ export class UserTableComponent implements OnInit, OnChanges {
   @ViewChild(MatPaginator) matPaginator!: MatPaginator;
 
   @Input() searchTerm: string = '';
+  @Input() selectedWorkoutType: string = '';
 
   constructor(
     private userService: UserService,
@@ -46,8 +47,14 @@ export class UserTableComponent implements OnInit, OnChanges {
   }
 
   applyFilter() {
-    const filteredUsers = this.userService.filterUsers(this.searchTerm);
+    let filteredUsers = this.userService.filterUsers(this.searchTerm);
+    if (this.selectedWorkoutType) {
+      filteredUsers = filteredUsers.filter(user =>
+        user.workouts.some(workout => workout.workoutType === this.selectedWorkoutType)
+      );
+    }
     this.users.data = filteredUsers;
     this.totalUsers = filteredUsers.length;
   }
 }
+

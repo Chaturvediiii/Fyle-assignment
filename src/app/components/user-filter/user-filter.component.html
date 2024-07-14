@@ -1,7 +1,9 @@
-<div class="container">
-    <div class="row">
-        <div class="col-xs-12">
-            
-        </div>
-    </div>
-</div>
+<select
+  id="workoutType"
+  [(ngModel)]="selectedWorkoutType"
+  (change)="onFilter()"
+  class="border p-3 rounded w-full"
+>
+  <option value="">All</option>
+  <option *ngFor="let type of workoutTypes" [value]="type">{{ type }}</option>
+</select>

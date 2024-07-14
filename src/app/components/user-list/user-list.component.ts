@@ -7,9 +7,15 @@ import { Component } from '@angular/core';
 })
 export class UserListComponent {
   searchTerm: string = '';
+  selectedWorkoutType: string = '';
 
   onSearch(searchTerm: string) {
     this.searchTerm = searchTerm;
   }
+
+  onFilter(selectedWorkoutType: string) {
+    this.selectedWorkoutType = selectedWorkoutType;
+  }
 }
+
 

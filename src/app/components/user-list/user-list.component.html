@@ -1,6 +1,7 @@
 <div class="flex justify-between p-3">
     <app-user-search (search)="onSearch($event)"></app-user-search>
-    <app-user-filter></app-user-filter>
+    <app-user-filter (filter)="onFilter($event)"></app-user-filter>
 </div>
-<app-user-table [searchTerm]="searchTerm"></app-user-table>
+<app-user-table [searchTerm]="searchTerm" [selectedWorkoutType]="selectedWorkoutType"></app-user-table>
+
 
