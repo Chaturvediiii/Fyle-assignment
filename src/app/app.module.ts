@@ -11,6 +11,8 @@ import { MaterialModule } from './material.module';
 import { UserService } from './services/user.service';
 import { AppRoutingModule } from './app-routing.module';
 import { UserFilterComponent } from './components/user-filter/user-filter.component';
+import { UserChartComponent } from './components/user-chart/user-chart.component';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 @NgModule({
   declarations: [
@@ -19,14 +21,16 @@ import { UserFilterComponent } from './components/user-filter/user-filter.compon
     UserTableComponent,
     UserSearchComponent,
     UserListComponent,
-    UserFilterComponent
+    UserFilterComponent,
+    UserChartComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,
     MaterialModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgxChartsModule
   ],
   providers: [UserService],
   bootstrap: [AppComponent]
