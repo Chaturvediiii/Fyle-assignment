@@ -1,27 +1,28 @@
-# HealthChallengeTracker
+# Health Challenge Tracker
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.0.
+Welcome to the Health Challenge Tracker, a Single Page Application (SPA) designed to help users log their workouts and track their progress over time. This application allows users to input their workout types, minutes spent, and provides various features to manage and visualize their fitness journey.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- **User Input:** Users can input their name, workout type, and minutes spent on each workout session.
+- **Workout List:** A comprehensive list of users and their workout details is displayed.
+- **Search Functionality:** Easily search for users by username.
+- **Dropdown Filter:** Filter workouts by type for better data management.
+- **Progress Visualization:** Display user progress through interactive charts showing workout types and corresponding minutes spent.
+- **Pagination:** Manage large datasets with a user-friendly pagination system.
+- **Unit Testing:** Includes unit tests for one component and one service, ensuring 100% code coverage.
+- **Deployment:** The application is hosted on a cloud service for easy access.
 
-## Code scaffolding
+## Technologies Used
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **Frontend:** Angular 14, Tailwind CSS
+- **Database:** MongoDB or MySQL (as per your choice)
 
-## Build
+## Getting Started
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+To get a local copy of the project, follow these steps:
 
-## Running unit tests
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/yourusername/health-challenge-tracker.git
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
