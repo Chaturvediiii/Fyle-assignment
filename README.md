@@ -17,7 +17,6 @@ Welcome to the Health Challenge Tracker, a Single Page Application (SPA) designe
 ## Technologies Used
 
 - **Frontend:** Angular 14, Tailwind CSS
-- **Database:** MongoDB or MySQL (as per your choice)
 
 ## Getting Started
 
