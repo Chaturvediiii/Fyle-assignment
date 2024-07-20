@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Health Challenge Tracker
 
 Welcome to the Health Challenge Tracker, a Single Page Application (SPA) designed to help users log their workouts and track their progress over time. This application allows users to input their workout types, minutes spent, and provides various features to manage and visualize their fitness journey.
@@ -26,3 +27,21 @@ To get a local copy of the project, follow these steps:
    ```bash
    git clone https://github.com/yourusername/health-challenge-tracker.git
 
+=======
+#Deployed Link : https://health-challenge-tracker-ten.vercel.app/user-input
+
+# Routes
+
+/user-input - Input form
+
+/user-list - All users
+
+/user-chart - Visual Representation
+
+
+# Code Coverage Report
+
+The unit tests for the UserListComponent and WorkoutService have achieved 95% code coverag. The detailed coverage report can be found in the `coverage` directory.
+
+![Coverage Report](coverage/health-challenge-tracker/index.html)
+>>>>>>> 5f52a64bfa815db50bfa8ea4e5283441a27f4eb7
